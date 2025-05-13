@@ -11,7 +11,8 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 8080;
 try {
-
+    console.log(process.env.MONGO_URL)
+    console.log(typeof process.env.MONGO_URL)
     const connection = mongoose.connect(process.env.MONGO_URL)
     connection && console.log("BASE DE DATOS CONECTADA");
 } catch (error) {
